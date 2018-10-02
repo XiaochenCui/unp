@@ -1,0 +1,22 @@
+*.swp
+
+*.o
+*.a
+
+# Executable files and intermediate file
+Make.defines
+Makefile
+config.h
+config.log
+config.status
+intro/byteorder
+intro/daytimetcpcli
+intro/daytimetcpcli1
+intro/daytimetcpcli2
+intro/daytimetcpcli3
+intro/daytimetcpcliv6
+intro/daytimetcpsrv
+intro/daytimetcpsrv1
+intro/daytimetcpsrv2
+intro/daytimetcpsrv3
+intro/daytimetcpsrvv6

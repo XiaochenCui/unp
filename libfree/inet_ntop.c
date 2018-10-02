@@ -24,7 +24,11 @@ static char rcsid[] = "$Id: inet_ntop.c,v 1.1.1.1 2002/11/14 03:33:35 fenner Exp
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
-#include <arpa/inet.h>
+/*
+ * Fix bug: inet_ntop.c:56:1: error: conflicting types for 'inet_ntop'
+ * See: https://www.jianshu.com/p/7e395e4f8515
+ * */
+/*#include <arpa/inet.h>*/
 #include <string.h>
 #include <errno.h>
 #include <stdio.h>
