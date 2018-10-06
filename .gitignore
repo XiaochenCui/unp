@@ -3,6 +3,8 @@
 *.o
 *.a
 
+.idea
+
 # Executable files and intermediate file
 Make.defines
 Makefile
@@ -20,3 +22,4 @@ intro/daytimetcpsrv1
 intro/daytimetcpsrv2
 intro/daytimetcpsrv3
 intro/daytimetcpsrvv6
+exercises/3_3
