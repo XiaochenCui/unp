@@ -22,14 +22,11 @@ main(int argc, char **argv)
 	if (connect(sockfd, (SA *) &servaddr, sizeof(servaddr)) < 0)
 		err_sys("connect error");
 
-	char				buff[MAXLINE];
-    struct sockaddr_storage peeraddr;
     socklen_t len;
-    if (getpeername(sockfd, (SA *) &peeraddr, &len) != 0)
-        err_sys("get socket name failed");
-    else
-        Inet_ntop(AF_INET, &peeraddr, buff, sizeof(buff));
-        printf("peer: %s\n", buff);
+    struct sockaddr_in cliaddr;
+    len = sizeof(cliaddr);
+    Getsockname(sockfd, (SA *) &cliaddr, &len);
+    printf("local addr: %s\n", Sock_ntop((SA *) &cliaddr, len));
 
 	while ( (n = read(sockfd, recvline, MAXLINE)) > 0) {
 		recvline[n] = 0;	/* null terminate */
