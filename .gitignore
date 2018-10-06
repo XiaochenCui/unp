@@ -7,7 +7,6 @@
 
 # Executable files and intermediate file
 Make.defines
-Makefile
 config.h
 config.log
 config.status
