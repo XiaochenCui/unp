@@ -515,3 +515,7 @@ void	 err_ret(const char *, ...);
 void	 err_sys(const char *, ...);
 
 #endif	/* __unp_h */
+
+/* fix: tcpservpoll01.c:13:24: error: ‘OPEN_MAX’ undeclared (first use in this function) */
+/* See: https://blog.csdn.net/jimmy1357/article/details/38435731 */
+#define OPEN_MAX 1024
